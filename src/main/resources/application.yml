@@ -1,0 +1,24 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/gym?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: wjffwj
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 300
+        max-active: 8000
+        max-wait: 500
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
